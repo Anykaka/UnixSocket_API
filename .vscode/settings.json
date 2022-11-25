@@ -5,7 +5,8 @@
         "operate46.h": "c",
         "introduction.h": "c",
         "operate.h": "c",
-        "public.h": "c"
+        "public.h": "c",
+        "limits": "c"
     },
     "cmake.configureOnOpen": true
 }
