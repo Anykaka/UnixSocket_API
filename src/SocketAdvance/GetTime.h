@@ -117,7 +117,7 @@ public:
     SocketClient() = default;
     ~SocketClient() = default;
 
-    int connect() {
+    int Connect() {
         // 创建套接字
         int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         if (sock == -1) {
@@ -143,7 +143,7 @@ public:
 
     bool sendMessage(const T& request, T& response) {
         std::cout << "sendMessage" << std::endl;
-        int sock = connect();
+        int sock = Connect();
         // 发送消息
         if (send(sock, &request, sizeof(request), MSG_NOSIGNAL) == -1) {
             std::cerr << "Failed to send request" << std::endl;
@@ -169,6 +169,8 @@ private:
 };
 
  template<>
- class SocketServer<int> {
+ class SocketServer<std::string> {
+
+
 
  };

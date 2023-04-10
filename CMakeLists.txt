@@ -20,6 +20,7 @@ ADD_EXECUTABLE( client
         )
 # 链接库
 TARGET_LINK_LIBRARIES(server
+        -lpthread
 )
 TARGET_LINK_LIBRARIES(client
         )
